@@ -3,6 +3,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @pagy, @reviews = pagy(@user.reviews.order(id: :desc))
+    counts(@user)
   end
 
   def new
@@ -19,6 +21,12 @@ class UsersController < ApplicationController
       flash.now[:danger] = 'ユーザの登録に失敗しました。'
       render :new
     end
+  end
+  
+  def likes
+    @user = User.find(params[:id])
+    @pagy, @likes = pagy(@user.likes.order(id: :desc))
+    counts(@user)
   end
 end
 

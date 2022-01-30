@@ -5,6 +5,9 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><%= link_to 'レビュー一覧', reviews_path, class: 'nav-link' %></li></li>
+      </ul>
       
         <div class="dropdown" id="navbarSupportedContent">
             <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
@@ -13,7 +16,7 @@
             <% if logged_in? %>
               <ul class="dropdown-menu">
                 <li class="nav-item"><%= link_to 'マイページ', user_path(current_user), class: 'nav-link' %></li>
-                <li class="nav-item">新規レビュー</li>
+                <li class="nav-item"><%= link_to '新規レビュー', new_review_path, class: 'nav-link' %></li>
                 <li class="dropdown-divider"></li>
             　　<li class="dropdown-item"><%= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link' %></li>
               </ul>

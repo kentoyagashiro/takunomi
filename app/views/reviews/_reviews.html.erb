@@ -1,0 +1,5 @@
+<ul>
+  <% @reviews.each do |reviews| %>
+    <li><%= link_to reviews.title, reviews %>:<%= reviews.comment %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,6 @@
+<h1>レビュー一覧</h1>
+<ul>
+  <% @review.each do |review| %>
+    <li><%= link_to review.title, review %>:<%= review.comment %></li>
+  <% end %>
+</ul>
