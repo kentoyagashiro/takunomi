@@ -7,7 +7,7 @@
             <tr><th>レビューID</th></tr>
             <tr><td><%= @review.id %></td></tr>
             <tr><th>レビューユーザー</th></tr>
-            <tr><td><%= @review.user.name %></td></tr>
+            <tr><td><%= link_to @review.user.name, user_path(@review.user), class: "text-decoration-none" %></td></tr>
             <tr><th>レビュータイトル</th></tr>
             <tr><td><%= @review.title %></td></tr>
             <tr><th>レビューコメント</th></tr>
