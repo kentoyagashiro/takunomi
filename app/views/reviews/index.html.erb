@@ -1,6 +1,9 @@
-<h1>レビュー一覧</h1>
-<ul>
-  <% @review.each do |review| %>
-    <li><%= link_to review.title, review %>:<%= review.comment %></li>
-  <% end %>
-</ul>
+    <div class="text-center">
+      <h1>レビュー一覧</h1>
+        <table class="table table-striped table-bordered">
+          <% @review.each do |review| %>
+            <tr><td><%= link_to review.title, review %></td></tr>
+            <tr><td><%= review.comment %></td></tr>
+          <% end %>
+        </table>
+    </div>
