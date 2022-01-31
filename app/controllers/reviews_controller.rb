@@ -22,7 +22,7 @@ class ReviewsController < ApplicationController
       flash[:success] = 'レビュー が正常に投稿されました'
       redirect_to @review
     else
-       @review = pagy(current_user.reviews.order(id: :desc))
+      #@review = pagy(current_user.reviews.order(id: :desc))
       flash.now[:danger] = 'レビュー が投稿されませんでした'
       render :new
     end
