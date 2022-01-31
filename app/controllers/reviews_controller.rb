@@ -1,8 +1,10 @@
 class ReviewsController < ApplicationController
+  before_action :require_user_logged_in, only: [:new]
    before_action :correct_user, only:[:edit, :update, :destroy]
   
   def index
-      @review = Review.all
+      @pagy, @review = pagy(Review.all, items: 10)
+      #@review = Review.all
   end
 
   def show
@@ -17,11 +19,11 @@ class ReviewsController < ApplicationController
      @review = current_user.reviews.build(review_params)
 
     if @review.save
-      flash[:success] = 'Task が正常に投稿されました'
+      flash[:success] = 'レビュー が正常に投稿されました'
       redirect_to @review
     else
        @review = pagy(current_user.reviews.order(id: :desc))
-      flash.now[:danger] = 'Task が投稿されませんでした'
+      flash.now[:danger] = 'レビュー が投稿されませんでした'
       render :new
     end
   end
