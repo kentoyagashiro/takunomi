@@ -17,7 +17,7 @@
             <tr><th>買ったお店</th></tr>
             <tr><td><%= @review.buystore %></td></tr>
           </table>
-          <div class="text-center">
+        <div class="text-center">
           <% if logged_in? && current_user.id == @review.user_id %>
               <%= link_to 'このレビューを編集する', edit_review_path(@review), class: 'btn btn-primary' %>
               <%= link_to 'このレビューを削除する', @review, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
