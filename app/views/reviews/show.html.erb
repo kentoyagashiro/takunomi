@@ -1,8 +1,10 @@
-      <h1 class="text-center"><%= @review.title %> のレビュー詳細ページ
+      <h1 class="text-center"><%= @review.title %> のレビュー詳細ページ</h1>
+      <div class="text-center">
         <% if logged_in? %>
           <%= render 'favorites/favorite_button', review: @review %>
         <% end %>
-      </h1 Class="text-center">
+      </div>
+        
         <table class="table table-striped table-bordered text-center ">
             <tr><th>レビューID</th></tr>
             <tr><td><%= @review.id %></td></tr>

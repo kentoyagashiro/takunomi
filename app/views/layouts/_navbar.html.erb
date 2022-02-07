@@ -18,7 +18,7 @@
                 <li class="nav-item"><%= link_to 'マイページ', user_path(current_user), class: 'nav-link' %></li>
                 <li class="nav-item"><%= link_to '新規レビュー', new_review_path, class: 'nav-link' %></li>
                 <li class="dropdown-divider"></li>
-            　　<li class="dropdown-item"><%= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link' %></li>
+                <li class="dropdown-item"><%= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link' %></li>
               </ul>
             <% else %>
             <ul class="dropdown-menu">
