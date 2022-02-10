@@ -9,7 +9,8 @@
                 <% if @review.image? %>
                   <%= image_tag @review.image.url if @review.image? %>
                 <% else %>
-                  <image src="/assets/default.jpg"/>
+                  <%= image_tag 'default.jpg' %>
+                  <!--image src="/assets/default.jpg"/-->
                 <% end %>
               </div>
         
