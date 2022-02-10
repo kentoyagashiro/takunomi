@@ -49,3 +49,5 @@ gem 'pagy'
 group :production do
   gem 'pg', '>= 0.18', '< 2.0'
 end
+
+  gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'

@@ -27,6 +27,11 @@
         <%= f.label :buystore, '買ったお店' %>
         <%= f.text_field :buystore, class: 'form-control' %>
       </div>
+      
+      <div class="field text-center">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      </div>
 
       <%= f.submit '投稿', class: 'btn btn-primary w-100' %>
     <% end %>

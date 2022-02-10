@@ -4,6 +4,8 @@ class Review < ApplicationRecord
   validates :combi, presence: true, length: { maximum: 20 }
   validates :buystore, presence: true, length: { maximum: 20 }
   
+  mount_uploader :image, ImageUploader
+  
   belongs_to :user
   has_many :favorites, foreign_key: "review_id", dependent: :destroy
 end
