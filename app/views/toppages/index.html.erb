@@ -1,13 +1,13 @@
 <% if logged_in? %>
 　<div class="jumbotron p-3 p-sm-5 my-4 rounded">
-    <div class="container text-center">
+    <div class="text-center">
       <h1>宅飲み</h1>
       <%= link_to 'マイページ', user_path(current_user), class: 'btn btn-lg btn-success' %>
       <%= link_to '新規レビュー', new_review_path, class: 'btn btn-lg btn-success' %>
     </div>
 　</div>
 <% else %>
- <div class="bg-secondary p-3 p-sm-5 my-4 rounded">
+ <div class="jumbotron p-3 p-sm-5 my-4 rounded">
   <div class="text-center text-white">
     <h1>宅飲み</h1>
     <%= link_to '新規登録をする', signup_path, class: 'btn btn-lg btn-primary' %>
